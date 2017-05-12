@@ -32,6 +32,8 @@ import v13 from '../data/v13.yaml';
 import v12 from '../data/v12.yaml';
 import v11 from '../data/v11.yaml';
 
+import rd_latest from '../data/rd_latest.yaml';
+
 const versions = [
   `v16.0.0`,
   `v15.0.0`,
@@ -81,7 +83,7 @@ class Wrapper extends React.Component {
     let routes;
     switch (version) {
       case 'unversioned':
-        routes = unversioned;
+        routes = unversioned.concat(rd_latest);
         break;
       case 'v16.0.0':
         routes = v16;
